@@ -132,6 +132,8 @@
        ->MockMetadataProvider))
 
   ([parent-metadata-provider mock-metadata]
+   (when (metadata.protocols/cached-metadata-provider? parent-metadata-provider)
+     (metadata.protocols/clear-cache! parent-metadata-provider))
    (lib/composed-metadata-provider
     (mock-metadata-provider mock-metadata)
     parent-metadata-provider)))
