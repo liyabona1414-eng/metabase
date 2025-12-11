@@ -16,7 +16,7 @@ import type { SortingOptions } from "./sorting";
 import type { TableId } from "./table";
 import type { UserId, UserInfo } from "./user";
 
-export type CollectionNamespace = null | "snippets";
+export type CollectionNamespace = null | "snippets" | "analytics";
 
 // Collection ID can be either a numeric or entity id
 export type RegularCollectionId = number | string;
@@ -140,7 +140,7 @@ export interface CollectionItem {
   can_restore?: boolean;
   can_delete?: boolean;
   "last-edit-info"?: LastEditInfo;
-  location?: string;
+  location?: string | null;
   effective_location?: string;
   authority_level?: CollectionAuthorityLevel;
   dashboard_count?: number | null;
