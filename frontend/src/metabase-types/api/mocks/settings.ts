@@ -359,6 +359,7 @@ export const createMockSettings = (
   "show-homepage-xrays": false,
   "show-metabase-links": true,
   "show-metabot": true,
+  "metabot-enabled-use-cases": ["omnibot", "transforms", "nlq", "sql"],
   "show-updated-permission-modal": false,
   "show-updated-permission-banner": false,
   "site-locale": "en",

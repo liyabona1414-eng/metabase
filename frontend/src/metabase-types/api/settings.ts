@@ -550,6 +550,7 @@ interface PublicSettings {
   "setup-token": string | null;
   "show-metabase-links": boolean;
   "show-metabot": boolean;
+  "metabot-enabled-use-cases": string[] | null;
   "show-google-sheets-integration": boolean;
   "site-locale": string;
   "site-url": string;
