@@ -64,7 +64,7 @@
         _             (api/check-400 (:enabled use-case-info) (format "The %s use case is not enabled" use_case))
         profile       (or profile_id (:profile use-case-info))
         session-id    (metabot-v3.client/get-ai-service-token api/*current-user-id* metabot-id)]
-    (store-message! conversation_id use_case profile_id [message])
+    (store-message! conversation_id use_case profile [message])
     (metabot-v3.client/streaming-request
      {:context         (metabot-v3.context/create-context context)
       :metabot-id      metabot-id
