@@ -1,10 +1,10 @@
 ---
-title: "Full-app embedding quickstart"
+title: "Full app embedding quickstart"
 redirect_from:
   - /docs/latest/embedding/interactive-embedding-quickstart
 ---
 
-# Full-app embedding quickstart
+# Full app embedding quickstart
 
 > If you are just starting out with Metabase embedding, consider using [Modular embedding](./modular-embedding.md) - an improved, more customizable option for embedding Metabase components.
 
@@ -19,7 +19,7 @@ You'll embed the full Metabase application in your app. Once logged in, people c
 
 The code featured in this guide can be found in our [sample repo](https://github.com/metabase/metabase-nodejs-express-interactive-embedding-sample).
 
-## Set up SSO and full-app embedding in Metabase
+## Set up SSO and fullapp embedding in Metabase
 
 ### Have a dashboard ready to embed
 
@@ -29,9 +29,9 @@ Visit that dashboard and make a note of its URL, e.g. `/dashboard/1-e-commerce-i
 
 You could also use the dashboard's [Entity ID](../installation-and-operation/serialization.md#metabase-uses-entity-ids-to-identify-and-reference-metabase-items). On the dashboard, click on the **info** button. On the **Overview** tab, look for the dashboard's **Entity ID**. Copy that Entity ID. You'll use that Entity ID in the iframe's `src` URL: (e.g., `src=/dashboard/entity/[Entity ID]`).
 
-### Enable full-app embedding
+### Enable full app embedding
 
-In Metabase, click on the **gear** icon in the upper right and go to **Admin > Embedding** and toggle on **Enable full-app embedding**.
+In Metabase, click on the **gear** icon in the upper right and go to **Admin > Embedding** and toggle on **Enable full app embedding**.
 
 Under **Authorized origins**, add the URL of the website or web app where you want to embed Metabase. If you're running your app locally, you can add localhost and specify the port number, e.g. `http://localhost:8080`.
 
@@ -153,7 +153,7 @@ How to test: Sign in to your app and visit the `/analytics` route. You should se
 
 ## Set up a group in Metabase
 
-Now that you have SSO and full-app embedding set up, it's time to set up groups so that you can apply permissions to your embedded Metabase entities (questions, dashboards, collections, and so on).
+Now that you have SSO and full app embedding set up, it's time to set up groups so that you can apply permissions to your embedded Metabase entities (questions, dashboards, collections, and so on).
 
 ### Add a `groups` key to your token
 

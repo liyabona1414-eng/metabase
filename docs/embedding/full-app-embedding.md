@@ -1,5 +1,5 @@
 ---
-title: Full-app embedding
+title: Full app embedding
 redirect_from:
   - /docs/latest/enterprise-guide/full-app-embedding
   - /docs/latest/embedding/full-app-embedding
@@ -12,13 +12,13 @@ redirect_from:
 
 {% include shared/in-page-promo-embedding-workshop.html %}
 
-**Full-app embedding** (previously called "interactive embedding") lets you embed the entire Metabase app in an iframe. Full app embedding integrates your [permissions](../permissions/introduction.md) and [SSO](../people-and-groups/start.md#authentication) to give people the right level of access to [query](../questions/query-builder/editor.md) and [drill-down](https://www.metabase.com/learn/metabase-basics/querying-and-dashboards/questions/drill-through) into your data.
+**Full app embedding** (previously called "interactive embedding") lets you embed the entire Metabase app in an iframe. Full app embedding integrates your [permissions](../permissions/introduction.md) and [SSO](../people-and-groups/start.md#authentication) to give people the right level of access to [query](../questions/query-builder/editor.md) and [drill-down](https://www.metabase.com/learn/metabase-basics/querying-and-dashboards/questions/drill-through) into your data.
 
-> If you are just starting out with Metabase embedding, consider using [Modular embedding](./modular-embedding.md) instead of full-app embedding - it's an improved, more customizable option for embedding individual Metabase components.
+> If you are just starting out with Metabase embedding, consider using [Modular embedding](./modular-embedding.md) instead of full app embedding - it's an improved, more customizable option for embedding individual Metabase components.
 
-## Full-app embedding demo
+## Full app embedding demo
 
-To get a feel for what you can do with full app embedding, check out our [Full-app embedding demo](https://www.metabase.com/embedding-demo).
+To get a feel for what you can do with full app embedding, check out our [Full app embedding demo](https://www.metabase.com/embedding-demo).
 
 To see the query builder in action, click on **Reports** > **+ New** > **Question**.
 

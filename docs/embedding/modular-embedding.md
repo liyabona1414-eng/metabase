@@ -15,7 +15,7 @@ Modular embedding lets you embed Metabase entities like questions, dashboards, o
 
 Modular embedding allows you to embed individual Metabase components (like questions, dashboards, or a query builder) using a simple drop-in script. You don't need to write embedding code on your own - just use the built-in wizard to create a code snippet, and past it into your app.
 
-Unlike with [full-app embedding](./full-app-embedding.md), where you embed the entire Metabase app in an iframe, modular embedding lets you choose from a set of predefined components like a single chart, a dashboard with optional drill-through, or query builder, and customize those components.
+Unlike with [full app embedding](./full-app-embedding.md), where you embed the entire Metabase app in an iframe, modular embedding lets you choose from a set of predefined components like a single chart, a dashboard with optional drill-through, or query builder, and customize those components.
 
 Modular embedding uses [JWT](../people-and-groups/authenticating-with-jwt.md) or [SAML](../people-and-groups/authenticating-with-saml.md) to authenticate people and automatically apply the right permissions.
 
