@@ -36,7 +36,7 @@ If you'd like to share your data with the good people of the internet, admins ca
 
 ## Comparison of embedding types
 
-| Action                                                                                                                          | [React SDK](./sdk/introduction.md) | [Modular](./mpdular-embedding.md) | [Full app](./full-app-embedding.md) | [Static](./static-embedding.md) | [Public](../embedding/public-links.md) |
+| Action                                                                                                                          | [React SDK](./sdk/introduction.md) | [Modular](./modular-embedding.md) | [Full app](./full-app-embedding.md) | [Static](./static-embedding.md) | [Public](../embedding/public-links.md) |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | --------------------------------- | ----------------------------------- | ------------------------------- | -------------------------------------- |
 | Display charts and dashboards                                                                                                   | ✅                                 | ✅                                | ✅                                  | ✅                              | ✅                                     |
 | Display interactive [filter widgets](https://www.metabase.com/glossary/filter-widget)                                           | ✅                                 | ✅                                | ✅                                  | ✅                              | ✅                                     |

@@ -34,7 +34,7 @@ You can pass parameters between Metabase and your website via the embedding URL 
 
 Full app embedding allows you to embed full Metabase app in an iframe. Full app embedding integrates with your data permissions to let people slice and dice data on their own using Metabase's query builder.
 
-## [Full app embedding quickstart](./ifull-app-embedding-quick-start-guide.md)
+## [Full app embedding quickstart](./full-app-embedding-quick-start-guide.md)
 
 You'll embed the full Metabase application in your app. Once logged in, people can view a Metabase dashboard in your web app, and be able to use the full Metabase application to explore their data, and only their data.
 

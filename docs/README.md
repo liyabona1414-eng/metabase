@@ -212,7 +212,7 @@ Metabase's reference documentation.
 - Static embedding
   - [Static embedding overview](./embedding/static-embedding.md)
   - [Parameters for static embeds](./embedding/static-embedding-parameters.md)
-  - [Translate embedded dashboards and questions](./embedding/translationg.md)
+  - [Translate embedded dashboards and questions](./embedding/translations.md)
 - [Securing embedded Metabase](./embedding/securing-embeds.md)
 
 ### Configuration
