@@ -22,15 +22,18 @@ import S from "./Table.module.css";
 const DEFAULT_ROW_HEIGHT = 47;
 
 export const TableComponent = <
-  T extends Record<string, any> & { children?: T[] },
+  T extends Record<string, any>,
+  K extends keyof T,
 >({
   data,
   columns,
   onSelect,
+  childProp,
 }: {
   data: T[];
   columns: ColumnDef<T, ReactNode>[];
   onSelect: (item: T) => void;
+  childProp?: K;
 }) => {
   const [scrollRef, setScrollRef] = useState<HTMLDivElement | null>(null);
 
@@ -39,11 +42,15 @@ export const TableComponent = <
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getExpandedRowModel: getExpandedRowModel(),
-    getSubRows: (row) => row.children,
-    initialState: {
-      expanded: true,
-    },
+    ...(childProp
+      ? {
+          getExpandedRowModel: getExpandedRowModel(),
+          getSubRows: (row: T) => row[childProp],
+          initialState: {
+            expanded: !!childProp || undefined,
+          },
+        }
+      : null),
   });
 
   return (
@@ -94,6 +101,7 @@ export const TableComponent = <
             table={table}
             tableContainerRef={scrollRef}
             onSelect={onSelect}
+            childProp={childProp}
           />
         )}
       </table>
@@ -101,17 +109,19 @@ export const TableComponent = <
   );
 };
 
-interface TableBodyProps<T> {
+interface TableBodyProps<T, K> {
   table: Table<T>;
   tableContainerRef: HTMLDivElement;
   onSelect: (item: T) => void;
+  childProp?: K;
 }
 
-function TableBody<T>({
+function TableBody<T extends Record<string, any>, K extends keyof T>({
   table,
   tableContainerRef,
   onSelect,
-}: TableBodyProps<T>) {
+  childProp,
+}: TableBodyProps<T, K>) {
   const { rows } = table.getRowModel();
 
   // Important: Keep the row virtualizer in the lowest component possible to avoid unnecessary re-renders.
@@ -144,6 +154,7 @@ function TableBody<T>({
             virtualRow={virtualRow}
             rowVirtualizer={rowVirtualizer}
             onSelect={onSelect}
+            childProp={childProp}
           />
         );
       })}
@@ -151,22 +162,25 @@ function TableBody<T>({
   );
 }
 
-interface TableBodyRowProps<T> {
+interface TableBodyRowProps<T, K> {
   row: Row<T>;
   virtualRow: VirtualItem;
   rowVirtualizer: Virtualizer<HTMLDivElement, HTMLTableRowElement>;
   onSelect: (item: T) => void;
+  childProp?: K;
 }
 
-function TableBodyRow<T>({
+function TableBodyRow<T extends Record<string, any>, K extends keyof T>({
   row,
   virtualRow,
   rowVirtualizer,
   onSelect,
-}: TableBodyRowProps<T>) {
+  childProp,
+}: TableBodyRowProps<T, K>) {
   const { depth } = row;
 
-  const canExpand = row.getCanExpand();
+  const canExpand =
+    childProp && (row.getCanExpand() || Object.hasOwn(row.original, childProp));
 
   return (
     <tr
